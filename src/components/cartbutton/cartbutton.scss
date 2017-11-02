@@ -1,0 +1,26 @@
+.jia,.jian{
+	position:absolute;
+	right:pxrem(40);
+	margin-top:pxrem(130);
+	background:#00A0DC;
+	border:0;
+	line-height:pxrem(40);
+	color:#FFF;
+	width:pxrem(40);
+	height:pxrem(40);
+	outline:none;
+	border-radius:50%;
+	@include font-dpr(20px);
+}
+.jian{
+	right:pxrem(138);
+}
+.zi{
+	position:absolute;
+	right:pxrem(90);
+	margin-left:pxrem(20);
+	margin-top:pxrem(130);
+	background:#FFF;
+	border:0;
+	@include font-dpr(16px);
+}

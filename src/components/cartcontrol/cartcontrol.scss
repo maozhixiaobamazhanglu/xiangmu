@@ -1,0 +1,141 @@
+.shopcart{
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	z-index:50;
+	max-height:pxrem(96+611);
+	.content{
+		width:100%;
+		background:#141d27;
+		height:pxrem(96);
+		color:#919396;
+		// z-index:99;
+		display: flex;
+		.content-left{
+			z-index:99;
+			padding:0 pxrem(24);
+			height:pxrem(96);
+			.logo-wrapper{
+				margin-top:pxrem(-20);
+				width:pxrem(88);
+				height:pxrem(88);
+				border: pxrem(12) solid #141d27;
+				background: #2B343C;
+				border-radius: 50%;
+				.icon-shopping_cart:before{
+					@include font-dpr(22px);
+					line-height:pxrem(88);
+					margin-left:pxrem(24);
+				}
+				.on:before{
+					color:#FFF;
+				}
+			}
+			.num{
+				position: absolute;
+				// top:pxrem(-25);
+				bottom:pxrem(80);
+				left:pxrem(88);
+				background:red;
+				border-radius: 40%;
+				padding:pxrem(8) pxrem(16);
+				color:#fff;
+			}
+		}
+		.content-center{
+			line-height:pxrem(96);
+			flex:1;
+			height:pxrem(96);
+			.price{
+				padding-right:pxrem(24);
+				border-right:1px solid #2B343C;
+				@include font-dpr(18px);
+				font-weight:700;
+			}
+			.text{
+				padding:0 pxrem(24);
+			}
+		}
+		.content-right{
+			line-height:pxrem(96);
+			width:pxrem(210);
+			height:pxrem(96);
+			background:#2B333B;
+			@include font-dpr(14px);
+			font-weight:700;
+			text-align:center;
+		}
+	}
+	.carty{
+		overflow:auto;
+		width:100%;
+		max-height:pxrem(611);
+		background:#FFF;
+		.cart-top{
+			width:pxrem(339*2);
+			position:fixed;
+			z-index:1;
+			background:#F3F5F7;
+			height:pxrem(78);
+			border-bottom:2px solid rgba(7,17,27,0.1);
+			padding:0 pxrem(36);
+			line-height:pxrem(80);
+			@include font-dpr(14px);
+			font-weight:200;
+			.left{
+				color:rbg(7,17,27);
+				float:left;
+			}
+			.right{
+				color:#00A0DC;
+				float:right;
+			}
+		}
+		.cart-dian{
+			height:pxrem(80);
+		}
+		.cart-content{
+			width:pxrem(741);
+			.forea{
+				height:pxrem(95);
+				margin:0 pxrem(36);
+				border-bottom:1px solid rgba(7,17,27,0.1);
+				display:flex;
+				@include font-dpr(14px);
+				line-height:pxrem(95);
+				.name{
+					flex:1;
+					font-weight:700;
+				}
+				.price{
+					color:red;
+					font-weight:700;
+					@include font-dpr(10px);
+					margin-left:pxrem(36);
+				}
+				.shu{
+					color:red;
+					font-weight:700;
+					margin-right:pxrem(24);
+				}
+				.nummm{
+					width:pxrem(150);
+				}
+				.numm{
+					position:relative;
+					top:pxrem(-100);
+					right:pxrem(-190);
+				}
+			}
+		}
+	}
+	.bgd{
+		background:rgba(7,17,27,0.6);
+		position:absolute;
+		bottom:0;
+		width:100%;
+		height:pxrem(667*2);
+		z-index:-1;
+	}
+}

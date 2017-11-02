@@ -1,0 +1,167 @@
+.header{
+	background:rgba(7,17,27,0.5);
+	position:relative;
+	// overflow:hidden;
+	.goods_pic{
+		display:inline-block;
+		@include setRem(padding,48,32,36,48);
+		.pic img{
+			border-radius:12px;
+			width:pxrem(128);
+			height:pxrem(128);
+		}
+	}
+	.content{
+		display:inline-block;
+		vertical-align:top;
+		margin-top:pxrem(48);
+		.title{
+			height:pxrem(32);
+			@include img-dpr(img/brand);
+			background-repeat:no-repeat;
+			background-position:center left;
+			background-size:pxrem(64) pxrem(32);
+			line-height:pxrem(32);
+			color:$color-text;
+			.name{
+				margin-left:pxrem(64+12);
+				font-weight:bold;
+				@include font-dpr(16px);
+			}
+		}
+		.descr{
+			margin-top:pxrem(16);
+			@include font-dpr(12px);
+			font-weight:200;
+			color:$color-text;
+		}
+		.supports{
+			height:pxrem(30);
+			margin-top:pxrem(16);
+			@include img-dpr(img/decrease_2);
+			background-repeat:no-repeat;
+			background-position:center left;
+			background-size:pxrem(30) pxrem(30);
+			line-height:pxrem(30);
+			color:$color-text;
+			.text{
+				margin-left:pxrem(30+8);
+				@include font-dpr(10px);
+			}
+		}
+	}
+	.tang{
+		width:pxrem(80);
+		height:pxrem(48);
+		position:absolute;
+		bottom:pxrem(85);
+		right:pxrem(24);
+		border-radius:pxrem(20);
+		text-align:center;
+		line-height:pxrem(48);
+		padding:pxrem(2);
+		padding-left:pxrem(10);
+		background:rgba(0,0,0,0.3);
+		color:#FFF;
+	}
+	.button-bar{
+		display:flex;
+		height:pxrem(56);
+		line-height:pxrem(62);
+		background:rgba(7,17,27,0.2);
+		.pic{
+			width:pxrem(60);
+			height:pxrem(60);
+			margin-left:pxrem(24);
+			@include img-dpr(img/bulletin);
+			background-repeat:no-repeat;
+			background-position:center left;
+			background-size:pxrem(54) pxrem(34);
+		}
+		.text{
+			flex:1;
+			@include font-dpr(12px);
+			white-space:nowrap;
+			text-overflow:ellipsis;
+			overflow:hidden;
+			color:$color-text;
+		}
+		.icon{
+			width:pxrem(10);
+			height:pxrem(10);
+			line-height:pxrem(64);
+			margin-left:pxrem(8);
+			margin-right:pxrem(24);
+			@include font-dpr(16px);
+			.icon-right:before{
+				color:$color-text;
+			}
+		}
+	}
+	.bg{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		overflow:auto;
+		z-index:-1;
+		filter:blur(20px);
+	}
+	.quan{
+		width:pxrem(610);
+		height:pxrem(1142);
+		position:absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		color:#FFF;
+		z-index:999;
+		background:rgba(7,17,27,0.8);
+		padding:pxrem(96) pxrem(70);
+		.y-top{
+			h2{
+				margin:pxrem(35) 0;
+				text-align:center;
+				@include font-dpr(16px);
+				font-weight:700;
+			}
+			.xing{
+				text-align:center;
+			}
+			.you{
+				margin:pxrem(55) 0;
+				span{
+					display:block;
+					@include font-dpr(16px);
+					text-align:center;
+					margin-bottom:pxrem(40);
+				}
+				ul{
+					li{
+						display:flex;
+						
+						.cont{
+							@include font-dpr(12px);
+							font-weight:200;
+							line-height:pxrem(36);
+							margin-bottom:pxrem(24);
+						}
+					}
+				}
+				.jie{
+					padding:0 pxrem(22);
+					@include font-dpr(12px);
+					line-height:pxrem(48);
+				}
+			}
+			
+		}
+		.y-bottom{
+			margin-top:pxrem(170);
+			@include font-dpr(32px);
+			text-align:center;
+		}
+	}
+}

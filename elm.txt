@@ -1,0 +1,56 @@
+common   放全局的通用的静态资源 js/css
+
+components/文件夹用来存放Vue 组件。个人建议，把每一个组件中使用到的image图片放置到对应的组件子文件目录下，便于统一的管理 
+Node_modules/npm安装的该项目的依赖库 
+vuex/文件夹存放的是和 Vuex store 相关的东西（state对象，actions，mutations) 
+router/文件夹存放的是跟vue-router相关的路由配置项 
+build/文件是 webpack 的打包编译配置文件 
+static/文件夹存放一些静态的、较少变动的image或者css文件 
+config/文件夹存放的是一些配置项，比如服务器访问的端口配置等 
+dist/该文件夹一开始是不存在，在我们的项目经过 build 之后才会产出 
+App.vue根组件，所有的子组件都将在这里被引用 
+index.html整个项目的入口文件，将会引用我们的根组件 App.vue 
+main.js入口文件的 js 逻辑，在webpack 打包之后将被注入到 index.html 中
+
+
+build目录是一些webpack的文件，配置参数什么的，一般不用动 
+config是vue项目的基本配置文件 
+node_modules是项目中安装的依赖模块 
+src源码文件夹，基本上文件都应该放在这里。 
+—assets 资源文件夹，里面放一些静态资源 
+—components这里放的都是各个组件文件 
+—App.vue App.vue组件 
+—main.js入口文件 
+static生成好的文件会放在这个目录下。 
+test测试文件夹，测试都写在这里 
+.babelrc babel编译参数，vue开发需要babel编译 
+.editorconfig 看名字是编辑器配置文件，不晓得是哪款编辑器，没有使用过。 
+.gitignore 用来过滤一些版本控制的文件，比如node_modules文件夹 
+index.html 主页 
+package.json 项目文件，记载着一些命令和依赖还有简要的项目描述信息 
+README.md 介绍自己这个项目的，想怎么写怎么写。不会写就参照github上star多的项目，看人家怎么写的
+
+
+2. .babelrc文件 
+.babelrc文件定义了ES6的转码规则，基于ES6编写的js代码在编译时都会被babel转码器转换为ES5代码。
+
+3.index.html 
+主页我们可以像平时普通的html文件一样引入文件和书写基本信息，添加meta标签等。
+
+4.main.js 
+这里是入口文件，可以引入一些插件或静态资源，当然引入之前要先安装了该插件，在package.json文件中有记录
+
+5.App.vue 
+这是一个标准的vue组件，包含三个部分，一个是模板，一个是script，一个是样式，这里需要了解vue的基础。
+
+
+
+vue + vuex+ vue-resource + vue-router + webpack + es6 + less的项目架构
+
+
+1.先配置数据   dev-server里面（配置内置服务）
+2.引入淘宝框架
+
+
+scss能引入css
+css不能引入scss
